@@ -156,6 +156,7 @@ public class BlogController {
         long totalPage = total%page.getPageSize()==0?total/page.getPageSize():total/page.getPageSize()+1;
         page.setTotal(total);
         page.setPageTotal(totalPage);
+        page.setSearchStr(searchStr);
         return Result.success(page);
     }
 
